@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Santa Isabel - Repostería Artesanal. Pasteles y empanadas de la más alta calidad.">
+  <title>Santa Isabel | Pasteleria Artesanal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- WhatsApp Float Button -->
+  <button class="whatsapp-float" onclick="openWhatsApp()" title="Contáctanos por WhatsApp">
+    <svg viewBox="0 0 32 32"><path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-4.713 1.262 1.262-4.669-0.292-0.508c-1.207-2.1-1.847-4.507-1.847-6.99 0-7.51 6.11-13.62 13.62-13.62s13.62 6.11 13.62 13.62-6.557 13.067-14.073 13.067zM21.305 19.26c-0.346-0.174-2.049-1.007-2.366-1.123-0.316-0.117-0.547-0.174-0.776 0.174s-0.892 1.123-1.094 1.347c-0.201 0.231-0.403 0.26-0.749 0.087-0.346-0.174-1.461-0.537-2.785-1.715-1.03-0.916-1.726-2.048-1.927-2.394s-0.022-0.534 0.152-0.707c0.156-0.155 0.346-0.403 0.519-0.605 0.174-0.201 0.231-0.346 0.346-0.577 0.116-0.231 0.058-0.433-0.028-0.606s-0.776-1.87-1.063-2.565c-0.28-0.672-0.56-0.58-0.776-0.591-0.2-0.01-0.431-0.012-0.661-0.012s-0.604 0.086-0.92 0.433c-0.316 0.346-1.206 1.179-1.206 2.873s1.235 3.333 1.406 3.561c0.174 0.231 2.395 3.716 5.847 5.187 0.817 0.349 1.455 0.558 1.952 0.715 0.822 0.262 1.569 0.225 2.161 0.136 0.659-0.098 2.049-0.835 2.338-1.642 0.289-0.807 0.289-1.501 0.202-1.642-0.086-0.14-0.317-0.231-0.663-0.405z"/></svg>
+  </button>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+    </div>
+    <h1 class="title">SANTA ISABEL</h1>
+    <p class="subtitle">PASTELERÍA ARTESANAL</p>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h2 class="hero-title">Línea Amarilla</h2>
+    <p class="hero-text">Pastelería artesanal de la más alta calidad</p>
+    <p class="hero-note">* Todos nuestros productos incluyen salsa agridulce de la casa</p>
+  </section>
+
+  <!-- Promo Banner -->
+  <div class="promo-banner">
+    <div class="promo-content">
+      <div class="promo-icon">
+        <svg viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+      </div>
+      <div class="promo-info">
+        <p class="promo-title">¡Promoción Especial!</p>
+        <p class="promo-text">Todas las cajas a solo <span class="promo-price">$24.000</span></p>
+        <p class="promo-validity">Válido hasta el 25 de noviembre de 2025</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Categories -->
+  <div class="categories">
+    <button class="category-btn active" data-category="todos">Todos</button>
+    <button class="category-btn" data-category="pasteles">Pasteles</button>
+    <button class="category-btn" data-category="empanadas">Empanadas</button>
+    <button class="category-btn" data-category="personales">Personales</button>
+  </div>
+
+  <!-- Products -->
+  <section class="products" id="products"></section>
+
+  <!-- Contact -->
+  <section class="contact">
+    <h3 class="contact-title">Contáctanos</h3>
+    <div class="contact-items">
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>Pedidos y consultas</span>
+      </div>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <span>Atención personalizada</span>
+      </div>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Entrega a domicilio</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2024 Santa Isabel - Repostería Artesanal | Hecho con amor y dedicación</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
